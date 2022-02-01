@@ -5,6 +5,7 @@
  */
 package area_cuadrado;
 
+import javax.swing.JOptionPane;
 /**
  *
  * @author Salvador
@@ -16,11 +17,34 @@ public class Area_Cuadrado {
      */
     public static void main(String[] args) {
         // Sacar el Perimetro, Area y Costo de Metro cuadrado de un cuadrado.
-        System.out.println("Sistema para Saber Perimetro, Area y Costo por metro Cuadrado de un Cuadrado");
+        Cuadrado  c1;
+        
+        float lado1;
+        float lado2;
+        
+        lado1 = Float.parseFloat(JOptionPane.showInputDialog("Digite el Lado 1: "));
+        lado2 = Float.parseFloat(JOptionPane.showInputDialog("Digite el Lado 2: "));
+        
+        System.out.println("Sistema para Saber Perimetro, Area de un Cuadrilatero");
         System.out.println("--------------------------------------------------------------------------------");
         System.out.println("--------------------------------------------------------------------------------");
         
-        //Cuadrado = NuevoCuadrado = new Cuadrado(cccc);
+        if (lado1 == lado2){
+            c1 = new Cuadrado(lado1);
+        }else{
+            c1 = new Cuadrado(lado1,lado2);
+        }
+        //Salida
+        System.out.println("Datos de Lado 1: "+ lado1);
+        System.out.println("Datos de Lado 2: "+ lado2);
+        System.out.println("------------------------------------------------");
+        System.out.println("------------------------------------------------");
+        
+        System.out.println("El Perimetro es: " + c1.getPerimetro());
+        System.out.println("El Area es: " + c1.getArea());
+        System.out.println("------------------------------------------------");
+        
+
         
         
         
