@@ -35,6 +35,7 @@ public class Area_Cuadrado {
             c1 = new Cuadrado(lado1,lado2);
         }
         //Salida
+        System.out.println("             AREA DE UN CUADRADO                 ");
         System.out.println("-------------------------------------------------");
         System.out.println("Datos de Lado 1: "+ lado1);
         System.out.println("Datos de Lado 2: "+ lado2);
