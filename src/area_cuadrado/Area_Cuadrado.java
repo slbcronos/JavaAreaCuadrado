@@ -6,6 +6,9 @@
 package area_cuadrado;
 
 import javax.swing.JOptionPane;
+import java.text.DecimalFormat;
+//import java.text.DecimalFormatSymbols;
+//import java.util.Locale;
 /**
  *
  * @author Salvador
@@ -17,6 +20,9 @@ public class Area_Cuadrado {
      */
     public static void main(String[] args) {
         // Sacar el Perimetro, Area y Costo de Metro cuadrado de un cuadrado.
+  
+        DecimalFormat formatea = new DecimalFormat("###,###.##");
+      
         Cuadrado  c1;
         
         float lado1;
@@ -42,9 +48,15 @@ public class Area_Cuadrado {
         System.out.println("------------------------------------------------");
         System.out.println("------------------------------------------------");
         
-        System.out.println("El Perimetro es: " + c1.getPerimetro());
-        System.out.println("El Area es: " + c1.getArea());
-        System.out.println("------------------------------------------------");
+        //JOptionPane.showMessageDialog(null,"El perimetro es: "+ String.format("%.2f", c1.getPerimetro(),"Importante") );
+        //JOptionPane.showMessageDialog(null,"El perimetro es: "+ String.format("%.2f", c1.getArea()) );
+        JOptionPane.showMessageDialog(null,"Perimetro: "+formatea.format(c1.getPerimetro()));
+        JOptionPane.showMessageDialog(null,"Area: "+formatea.format(c1.getArea()));
+        
+ 
+        //System.out.println("El Perimetro es: " + c1.getPerimetro());
+       // System.out.println("El Area es: " + c1.getArea());
+        //System.out.println("---------------------//---------------------------");
         
 
         
